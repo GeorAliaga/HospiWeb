@@ -170,7 +170,7 @@
             </div>
 
             <label>Contraseña</label>
-            <input name="password" type="password" placeholder="Ingrese clave de acceso"
+            <input name="password" type="password" placeholder="Ingrese su clave de acceso"
                    autocomplete="current-password" required />
 
             <button class="btn" type="submit">Ingresar al Dashboard</button>
