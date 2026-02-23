@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Workload Analyzer - Login</title>
+    <title>Login</title>
     <style>
         * { box-sizing: border-box; }
 
@@ -154,7 +154,7 @@
              alt="Hospital Logo"/>
     </div>
 
-    <h1>Workload Analyzer</h1>
+    <h1>Consola de Supervisión</h1>
     <div class="sub">Dashboard Confidencial de Monitoreo - Hospital Militar</div>
 
     <div class="inner">
