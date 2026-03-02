@@ -5,7 +5,7 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
-    // DEMO: para tu ejemplo
+    // DEMO: cambia luego (no lo dejes así en producción)
     private static final String DEMO_PASS = "123456";
 
     @Override

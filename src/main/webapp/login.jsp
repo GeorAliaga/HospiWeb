@@ -13,7 +13,6 @@
     <title>Login</title>
     <style>
         * { box-sizing: border-box; }
-
         body{
             margin:0;
             font-family: Arial, sans-serif;
@@ -24,7 +23,6 @@
             justify-content:center;
             padding: 24px;
         }
-
         .card{
             width: 460px;
             background:#fff;
@@ -33,12 +31,10 @@
             padding: 28px 28px 22px;
             border:1px solid #e7eef9;
         }
-
         .inner{
-            max-width: 360px;       /* <- esto centra y evita que “se vaya” */
+            max-width: 360px;
             margin: 0 auto;
         }
-
         .logoWrap{
             width:92px; height:92px; border-radius:50%;
             margin:0 auto 12px auto;
@@ -48,7 +44,6 @@
             background:#fff;
         }
         .logoWrap img{ width:76px; height:76px; object-fit:contain; }
-
         h1{
             margin:10px 0 6px;
             text-align:center;
@@ -62,7 +57,6 @@
             margin-bottom:20px;
             line-height: 1.35;
         }
-
         .err{
             margin: 0 auto 12px;
             background:#ffecec;
@@ -72,7 +66,6 @@
             border-radius:10px;
             font-size:13px;
         }
-
         label{
             font-size:13px;
             color:#0d2a57;
@@ -80,8 +73,6 @@
             display:block;
             margin:12px 0 6px;
         }
-
-        /* “Usuario” como bloque NO editable */
         .roleBox{
             width:100%;
             padding: 12px 12px;
@@ -94,7 +85,7 @@
             align-items:center;
             gap:10px;
             user-select: none;
-            cursor: default; /* <- no parece editable */
+            cursor: default;
         }
         .roleBadge{
             font-size:12px;
@@ -109,7 +100,6 @@
             font-weight:bold;
             letter-spacing:.04em;
         }
-
         input[type="password"]{
             width:100%;
             padding:12px 12px;
@@ -123,7 +113,6 @@
             border-color:#2c66c3;
             background:#fff;
         }
-
         .btn{
             margin-top:16px;
             width:100%;
@@ -137,13 +126,12 @@
             font-size:14px;
         }
         .btn:hover{ filter:brightness(1.05); }
-
         .foot{
             text-align:center;
             margin-top:14px;
             font-size:12px;
             color:#93a3bd;
-            letter-spacing:.12em;
+            letter-spacing:.08em;
         }
     </style>
 </head>
@@ -155,15 +143,15 @@
     </div>
 
     <h1>Consola de Supervisión</h1>
-    <div class="sub">Dashboard Confidencial de Monitoreo - Hospital Militar</div>
+    <div class="sub">Dashboard confidencial de monitoreo — entorno DEMO</div>
 
     <div class="inner">
         <% if (err != null) { %>
         <div class="err"><%= err %></div>
         <% } %>
 
-        <form method="post" action="login">
-            <label>Usuario Autorizado</label>
+        <form method="post" action="<%=request.getContextPath()%>/login">
+            <label>Usuario autorizado</label>
             <div class="roleBox" aria-label="Usuario Autorizado">
                 <span class="roleBadge">ROL</span>
                 <span class="roleText">GENERAL</span>
@@ -173,10 +161,10 @@
             <input name="password" type="password" placeholder="Ingrese su clave de acceso"
                    autocomplete="current-password" required />
 
-            <button class="btn" type="submit">Ingresar al Dashboard</button>
+            <button class="btn" type="submit">Ingresar al dashboard</button>
         </form>
 
-        <div class="foot">ACCESO RESTRINGIDO — USO EXCLUSIVO DE LA AUTORIDAD COMPETENTE</div>
+        <div class="foot">ACCESO RESTRINGIDO — USO EXCLUSIVO</div>
     </div>
 </div>
 </body>
